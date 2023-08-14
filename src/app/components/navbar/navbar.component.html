@@ -1,0 +1,28 @@
+<nav appManager class="w-full flex py-6 justify-between items-center navbar">
+    <img src="../assets/logo.svg" alt="logo" class="w-[124px] h-[32px]">
+    <!-- <ul class="list-none sm:flex hidden justify-end items-center flex-1">
+        <li id={{navLink.id}} appAnchor="navLinks.id" class="font-poppins font normal cursor-pointer text-[16px] text-white mr-10" *ngFor=" let navLink of navLinks; index as i">
+            <a routerLink="{{navLink.linkurl}}"> {{navLink.title}} </a>
+        </li> 
+    </ul>
+    <button class="sm:hidden flex flex-1 justify-end items-center" (click)="toggleNavbar()">
+        <mat-icon class="w-[28px] h-[28px] object-contain text-white"> {{!navbarOpened ? 'menu' : 'close'}} </mat-icon>
+        <div class=" p-6 bg-gradient-to-r from-gray-500 to-black absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar">
+            <ul class="list-none flex flex-col justify-end items-center flex-1">
+                <li class="font-poppins font normal cursor-pointer text-[16px] text-white mb-5" *ngFor="let navLink of navLinks; index as i">
+                    <a> {{navLink.title}} </a>
+                </li>
+            </ul>
+        </div>
+    </button> -->
+    <button class=" sm:hidden flex justify-end items-center">
+        <mat-icon (click)="toggleNavbar()" class="w-[28px] h-[28px] object-contain text-white sm:text-white">{{!showMenu? 'menu' : 'close'}}</mat-icon>
+    </button>
+    <div class="absolute top-[70px] w-auto sm:w-auto left-0 right-0 sm:top-auto mx-auto sm:mx-0 ">
+        <ul class="sm:flex justify-end items-center" [ngClass]="{'hidden': !showMenu, 'flex flex-col h-[200px] sm:h-0 bg-black text-white duration-700': showMenu}" >
+            <li id={{navLink.id}} appAnchor="navLinks.id" class="font-poppins font-normal cursor-pointer text-[16px] text-white sm:text-white p-2 sm:mr-10 mr-0" *ngFor=" let navLink of navLinks; index as i">
+                <a routerLink="{{navLink.linkurl}}"> {{navLink.title}} </a>
+            </li>
+        </ul>
+    </div>
+</nav>

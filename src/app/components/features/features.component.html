@@ -1,0 +1,39 @@
+ <div class="bg-black w-full overflow-hidden">
+    <div class="sm:px-16 px-6 flex justify-center items-center">
+      <div class="xl:max-w-[1280px] w-full">
+          <app-navbar></app-navbar>
+      </div>
+    </div>
+</div>
+<div class="bg-black xl:max-w-[1280px] w-full sm:px-16 px-6">
+    <section id="two" appSection="two" class="flex md:flex-row flex-col md:py-16 py-10">
+        <div class="flex-1 flex justify-center items-start flex-col">
+            <h2 class="font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full"> You do the business, <br className='sm:block hidden'/> we'll handle the money </h2>
+            <p class="font-poppins font-normal text-white text-[18px] leading-[30.8px] max-w-[470px] mt-5">With the right credit card, you can improve your financial life by bulding credit, earning rewards and saving money. But with hundreds of credit cards on the market. </p>
+            <button type="button" class="py-4 px-6 bg-blue-gradient font-medium text-[18px] text-primary outline-none mt-10 rounded-xl"> Get Started </button>
+        </div>
+        <div class="grid md:grid-flow-row grid-cols-1 md:my-10 mt-[40px]">
+            <div class="flex justify-center items-center feature-card rounded-2xl py-6 md:ml-[4rem] ml-0" *ngFor="let feature of features; index as i">
+                <div class="w-[64px] h-[64px] rounded-full flex justify-center bg-dimBlue ml-5" >
+                    <img src="{{feature.icon}}" class="w-[50%] h-[50%] flex justify-center items-center mt-[15px]"/>
+                </div>
+                <div class="flex-1 flex flex-col ml-3 ">
+                    <h4 class="font-poppins font-semibold text-white text-[20px] leading-[23px] mb-1">{{feature.title}}</h4>
+                    <p class="font-poppins font-normal text-white text-[16px] leading-[24px] mb-1">{{feature.content}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="flex md:flex-row flex-col sm:py-16 py-6">
+    <div class="flex-1 flex justify-center items-start flex-col">
+        <h2 class="font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full"> Find a better card deal <br class="sm:block hidden" /> in few wasy steps. </h2>
+        <p class="font-poppins font-normal text-white text-[18px] leading-[30.8px] max-w-[470px] mt-5"> Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau. </p>
+        <button type="button" class="py-4 px-6 bg-blue-gradient font-medium text-[18px] text-primary outline-none mt-10 rounded-xl"> Get Started </button>
+    </div>
+    <div class="flex-1 flex justify-center items-center md:ml-10 ml-0 md:mt-0 mt-10 relative">
+        <img src="../assets/card.png" alt="card" class="w-[100%] h-[100%]" />
+    </div>
+</section>
+
+</div>
+  
